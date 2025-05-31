@@ -81,9 +81,16 @@ const fetchContactList = async () => {
 };
 
 // get the app element
-let appElement = document.getElementById("app1");
+let appElement = document.getElementByClassName("app1");
 appElement.addEventListener("click", () => {
   displayScreen("contact-screen");
 });
 
 fetchContactList();
+
+// //app screen
+
+// let app1 = document.getElementByClassName("app1")[0];
+// app1.addEventListener("click", (event) => {
+//   displaycontact();
+// });

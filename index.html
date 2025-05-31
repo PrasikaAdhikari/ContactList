@@ -38,7 +38,7 @@
             </div>
             <!-- homescreen -->
 
-            <main id="home-screen" class="screen h-100  position-relative  hidden">
+            <main id="home-screen" class="screen h-100  position-relative  hidden ">
 
                 <video autoplay muted loop playsinline class="video-bg">
                     <source src="galaxy.webm" type="video/webm" />
@@ -63,8 +63,27 @@
             </main>
 
             <!-- app screen -->
-            <main id="app-screen" class="screen h-100 bg-success  ">
-                <div id="app1">contact</div>
+            <main id="app-screen" class="screen h-100 position-relative">
+                <div class="d-flex justify-content-between gap-3 px-3 position-absolute"
+                    style="top: 450px; width: 100%;">
+                    <div class="app1 bg-white rounded-4 text-center d-flex flex-column justify-content-center align-items-center"
+                        style="height: 70px; width: 25%;">
+                        <i class="fa-regular fa-address-book"></i>
+                        <span>Contacts</span>
+                    </div>
+
+                    <div class="app2 bg-white rounded-4 text-center d-flex flex-column justify-content-center align-items-center"
+                        style="height: 70px; width: 25%;">
+                        <i class="fa-solid fa-images"></i>
+                        <span>Photos</span>
+                    </div>
+
+                    <div class="camera bg-white rounded-4 text-center d-flex flex-column justify-content-center align-items-center"
+                        style="height: 70px; width: 25%;">
+                        <i class="fa-solid fa-camera-retro"></i>
+                        <span>Camera</span>
+                    </div>
+                </div>
             </main>
 
             <!-- contact screen -->
