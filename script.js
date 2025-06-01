@@ -1,5 +1,5 @@
 let contactList = [];
-
+let musicList = [];
 // display screens
 const displayScreen = (screenName) => {
   let screens = document.getElementsByClassName("screen");
@@ -80,17 +80,74 @@ const fetchContactList = async () => {
   contactListElement.innerHTML = accItems;
 };
 
-// get the app element
-let appElement = document.getElementByClassName("app1");
-appElement.addEventListener("click", () => {
+//get the app element
+let appElement = document.getElementsByClassName("app1")[0];
+appElement.addEventListener("click", (event) => {
   displayScreen("contact-screen");
 });
 
 fetchContactList();
 
-// //app screen
+//
 
-// let app1 = document.getElementByClassName("app1")[0];
-// app1.addEventListener("click", (event) => {
-//   displaycontact();
-// });
+// // function to fetch contact list
+// const fetchMusicList = async () => {
+//   const response = await fetch("https://randomuser.me/api?results=3");
+//   const data = await response.json();
+//   console.log(data.results);
+
+//   musicList = data.results;
+
+//   let musicListElement = document.getElementById("musicList");
+
+//   let accItems = "";
+
+//   let music = 0;
+
+//   for (music of musicList) {
+//     music += 1;
+//     console.log(music);
+//     let accItem = ` <div class="accordion-item">
+//                         <h2 class="accordion-header">
+//                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+//                                 data-bs-target="#contact-${contactNo}" aria-expanded="true" aria-controls="contact-${contactNo}">
+//                                 <img src="${contact.picture.thumbnail}" />
+//                                 <div>
+//                                     <div>${contact.name.first} ${contact.name.last}</div>
+//                                     <div>Location</div>
+//                                 </div>
+
+//                             </button>
+//                         </h2>
+//                         <div id="contact-${contactNo}" class="accordion-collapse collapse"
+//                             data-bs-parent="#contactList">
+//                             <div class="accordion-body">
+//                                 <div>
+//                                     <img src="${contact.picture.large}" alt="">
+//                                 </div>
+//                                 <div>
+//                                     <span>NAME</span>
+//                                     <span>PHONE</span>
+//                                     <span>Email</span>
+//                                     <span>Location</span>
+//                                 </div>
+
+//                             </div>
+//                         </div>
+//                     </div>`;
+
+//     accItems += accItem;
+//   }
+
+//   contactListElement.innerHTML = accItems;
+// };
+
+//get the app element
+let appElement1 = document.getElementsByClassName("app3")[0];
+appElement1.addEventListener("click", (event) => {
+  displayScreen("music-screen");
+});
+
+// fetchmusicList();
+
+// //
