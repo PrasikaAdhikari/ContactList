@@ -38,7 +38,7 @@
             </div>
             <!-- homescreen -->
 
-            <main id="home-screen" class="screen h-100  position-relative  hidden ">
+            <main id="home-screen" class="screen h-100  position-relative   ">
 
                 <video autoplay muted loop playsinline class="video-bg">
                     <source src="galaxy.webm" type="video/webm" />
@@ -63,7 +63,7 @@
             </main>
 
             <!-- app screen -->
-            <main id="app-screen" class="screen h-100 position-relative  hidden">
+            <main id="app-screen" class="screen h-100 position-relative  ">
                 <div class="d-flex justify-content-between gap-3 px-3 position-absolute"
                     style="top: 450px; width: 100%;">
                     <div class="app1 bg-white rounded-4 text-center d-flex flex-column justify-content-center align-items-center"
@@ -87,7 +87,7 @@
             </main>
 
             <!-- contact screen -->
-            <main id="contact-screen" class="screen h-100 bg-transparent text-white  hidden">
+            <main id="contact-screen" class="screen h-100 bg-transparent text-white  ">
                 <div class="sub-screen d-flex flex-column align-items-center">
                     <h1 class="text-dark">Contacts</h1>
                     <div class="w-100 p-2"><input type="text" class="w-100 rounded-3 border-0"></div>
@@ -138,35 +138,30 @@
                     <h1 class="text-dark">PlayList</h1>
                     <div class="w-100 p-2"><input type="text" class="w-100 rounded-3 border-0"></div>
                     <i class="fa-solid fa-magnifying-glass "
-                        style="color:black; position: relative; top: -28px ; right: 40%;">
+                        style="color:black; position: relative; top: -28px ; right: 40%; ">
 
                     </i>
                     <div class="w-100">
 
-                        <div class="accordion" id="contactList">
+                        <div class="accordion" id="musicList">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <img src="https://randomuser.me/api/portraits/women/62.jpg" />
-
+                                        <audio id="audio-player" src=" " controls></audio>
                                         <div>Song Title</div>
-
-
-
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
-                                    data-bs-parent="#contactList">
+                                    data-bs-parent="#musicList">
                                     <div class="accordion-body">
+                                        <!-- <div>
+                                         <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="">
+                                        </div> -->
                                         <div>
-                                            <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="">
-                                        </div>
-                                        <div>
-                                            <span>NAME</span>
-                                            <span>PHONE</span>
-                                            <span>Email</span>
-                                            <span>Location</span>
+                                            <span>Artist Name</span>
+                                            <span>Song Title</span>
+
                                         </div>
 
                                     </div>
