@@ -1,5 +1,10 @@
 let contactList = [];
 let musicList = [];
+let spinnerElement = document.getElementById("spinner");
+let Fahrenheit = document.getElementById("fah");
+let Celsius = document.getElementById("cel");
+
+let searchElement = document.getElementById("search");
 // display screens
 const displayScreen = (screenName) => {
   let screens = document.getElementsByClassName("screen");
@@ -27,9 +32,13 @@ sliderElement.addEventListener("change", (event) => {
     sliderElement.value = 0;
   }
 });
+//you can use then as well, where all the required data can be generated without waiting for the others.
+//await waits for the data to be generated. Used more often, but waits.
 
 // function to fetch contact list
+
 const fetchContactList = async () => {
+  spinnerElement.classList.remove("hidden");
   const response = await fetch("https://randomuser.me/api?results=3");
   const data = await response.json();
   console.log(data.results);
@@ -78,6 +87,7 @@ const fetchContactList = async () => {
   }
 
   contactListElement.innerHTML = accItems;
+  spinnerElement.classList.add("hidden");
 };
 
 //get the app element
@@ -150,4 +160,14 @@ appElement1.addEventListener("click", (event) => {
 
 // fetchmusicList();
 
-// //
+// for temperature convertor
+let appElement4 = document.getElementsByClassName("app4")[0];
+appElement4.addEventListener("click", (event) => {
+  displayScreen("temperature-screen");
+});
+
+const tempConverter = () => {
+  let fahValue = Celsius.value * 100;
+  console.log(Celsius.value);
+  Fahrenheit.value = fahValue;
+};

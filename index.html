@@ -38,7 +38,7 @@
             </div>
             <!-- homescreen -->
 
-            <main id="home-screen" class="screen h-100  position-relative   ">
+            <main id="home-screen" class="screen h-100  position-relative    hidden">
 
                 <video autoplay muted loop playsinline class="video-bg">
                     <source src="galaxy.webm" type="video/webm" />
@@ -63,7 +63,7 @@
             </main>
 
             <!-- app screen -->
-            <main id="app-screen" class="screen h-100 position-relative  ">
+            <main id="app-screen" class="screen h-100 position-relative hidden ">
                 <div class="d-flex justify-content-between gap-3 px-3 position-absolute "
                     style="top: 450px; width: 100%;">
                     <div class="app1 bg-white rounded-4 text-center d-flex flex-column justify-content-center align-items-center"
@@ -83,36 +83,62 @@
                         <i class="fa-solid fa-music"></i>
                         <span>Music</span>
                     </div>
+
+                    <div class="app4 bg-white rounded-4 text-center d-flex flex-column justify-content-center align-items-center"
+                        style="height: 70px; width: 25%;" id="app4">
+                        <i class="fa-solid fa-temperature-three-quarters"></i>
+                        <span>Convertor</span>
+                    </div>
+
                 </div>
+
+
             </main>
 
             <!-- contact screen -->
             <main id="contact-screen" class="screen h-100 bg-transparent text-white  ">
                 <div class="sub-screen d-flex flex-column align-items-center">
+
+                    <!-- NEED TO WORK HERE ON THE LAYOUT -->
+
+                    <div onclick="displayScreen('app-screen')" style="margin-right: 250px"><i
+                            class="fa-solid fa-arrow-left"></i></div>
+
                     <h1 class="text-dark">Contacts</h1>
-                    <div class="w-100 p-2"><input type="text" class="w-100 rounded-3 border-0"></div>
+                    <!-- Need to add spinner, and remove it once the data is fetched, adsing spinner would let the users know they are waiting for something, enhancing the user experience -->
+                    <div class="spinner-border" id="spinner text-sucess" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="w-100 p-2"><input type="text " class="w-100 rounded-3 border-0" placeholder="search"
+                            style="padding-left: 40px">
+                    </div>
                     <i class="fa-solid fa-magnifying-glass "
                         style="color:black; position: relative; top: -28px ; right: 40%;">
 
                     </i>
                     <div class="w-100">
 
-                        <div class="accordion" id="contactList">
-                            <!-- <div class="accordion-item">
-                                <h2 class="accordion-header">
+                        <div class="accordion" id="contactList ">
+                            <div class="accordion-item ">
+                                <h2 class="accordion-header   ">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <img src="https://randomuser.me/api/portraits/women/62.jpg" />
+                                        <img src="https://randomuser.me/api/portraits/women/62.jpg"
+                                            style=" width: 50px; height: 60px" />
                                         <div>
-                                            <div>NAME</div>
-                                            <div>Location</div>
+                                            <span>
+                                                <div id="name" style="margin: 4">Name</div>
+                                                <div>Location</div>
+
+                                            </span>
+
                                         </div>
 
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     data-bs-parent="#contactList">
-                                    <div class="accordion-body">
+                                    <div class="accordion-body ">
                                         <div>
                                             <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="">
                                         </div>
@@ -125,7 +151,7 @@
 
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
 
                         </div>
                     </div>
@@ -133,7 +159,7 @@
             </main>
 
             <!-- music screen -->
-            <main id="music-screen" class="screen h-100 bg-transparent text-white">
+            <main id="music-screen" class="screen h-100 bg-transparent text-white hidden">
                 <div class="sub-screen d-flex flex-column align-items-center">
                     <h1 class="text-dark">PlayList</h1>
                     <div class="w-100 p-2"><input type="text" class="w-100 rounded-3 border-0"></div>
@@ -172,8 +198,31 @@
                     </div>
                 </div>
             </main>
+
+            <!-- Temperature Screen -->
+            <main id="temperature-screen" class="screen h-100 bg-transparent text-white">
+                <div class="sub-screen d-flex flex-column align-items-center">
+                    <h1 class="text-dark">Temperature Convertor</h1>
+                    <h4>Celsius</h4>
+                    <div class="w-100 p-2">
+
+                        <input type="text" class="w-100 rounded-3 border-0" placeholder="Enter the Celsius" id="cel">
+
+                    </div>
+                    <button onclick="tempConverter()"> Convert</button>
+                    <h4> Fahrenheit</h4>
+                    <div class="w-100 p-2 ">
+
+                        <input type="text" class="w-100 rounded-3 border-0" placeholder="Fahrenheit" id="fah">
+
+                    </div>
+
+
+                </div>
+            </main>
+
+            <div onclick="DisplayScreen('contact-screen')">App2</div>
         </div>
-    </div>
 </body>
 <!-- bootstrap js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
