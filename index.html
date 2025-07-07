@@ -118,36 +118,32 @@
                     </i>
                     <div class="w-100">
 
-                        <div class="accordion" id="contactList ">
-                            <div class="accordion-item ">
-                                <h2 class="accordion-header   ">
+                        <div class="accordion" id="contactList">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <img src="https://randomuser.me/api/portraits/women/62.jpg"
-                                            style=" width: 50px; height: 60px" />
+                                        <img src="https://randomuser.me/api/portraits/women/62.jpg" />
                                         <div>
-                                            <span>
-                                                <div id="name" style="margin: 4">Name</div>
-                                                <div>Location</div>
-
-                                            </span>
-
+                                            <div>Name</div>
+                                            <div>Location</div>
                                         </div>
 
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     data-bs-parent="#contactList">
-                                    <div class="accordion-body ">
+                                    <div class="accordion-body">
                                         <div>
                                             <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="">
                                         </div>
                                         <div>
-                                            <span>NAME</span>
-                                            <span>PHONE</span>
+                                            <span>Name</span>
+                                            <span>Phone</span>
                                             <span>Email</span>
                                             <span>Location</span>
                                         </div>
+
 
                                     </div>
                                 </div>
@@ -221,6 +217,27 @@
                 </div>
             </main>
 
+            FlexBlog Screen
+            <main id="flex-screen" class="screen h-100 bg-transparent text-white">
+                <div class="sub-screen d-flex flex-column align-items-center">
+                    <h1 class="text-dark">Flex-Blog</h1>
+
+                    <div class="w-100 p-2">
+
+                        <input type="text" class="w-100 rounded-3 border-0" placeholder="Enter the Celsius" id="cel">
+
+                    </div>
+                    <button onclick="tempConverter()"> Convert</button>
+                    <h4> Fahrenheit</h4>
+                    <div class="w-100 p-2 ">
+
+                        <input type="text" class="w-100 rounded-3 border-0" placeholder="Fahrenheit" id="fah">
+
+                    </div>
+
+
+                </div>
+            </main>
             <div onclick="DisplayScreen('contact-screen')">App2</div>
         </div>
 </body>
